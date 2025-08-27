@@ -13,13 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "@prisma/client": "^6.15.0",
     "@types/node": "^24.3.0",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "prisma": "^6.15.0"
   }
 }

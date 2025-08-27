@@ -43,6 +43,9 @@
     "moduleDetection": "force",
     "skipLibCheck": true,     // Skip checking of type declaration files for faster compilation
     "resolveJsonModule": true, // Allow importing JSON files as modules
+
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions":  true,
   },
   "include": ["src/**/*"],      // Include all `.ts` files in the `src` folder
   "exclude": ["node_modules"]   // Exclude the `node_modules` folder

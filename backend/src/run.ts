@@ -1,8 +1,14 @@
 // import express, {Request, Response} from 'express'; // gives verbatimModuleSyntax by typescript type error handling
 import express from "express";
 import type { Request, Response } from "express";
+import dotenv from "dotenv"
+import {DBConnection} from "./db/init_db.ts"
+
+dotenv.config()
 
 const app = express();
+
+DBConnection()
 
 const PORT = process.env.PORT || 3001;
 

@@ -1,0 +1,29 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Contact{
+  id                   Int                            @id @default(autoincrement())
+  phoneNumber          String?                        @unique
+  email                String?                        @unique
+  linkedId             Int?
+  // linkedPrecedence     "secondary"| "primary"
+  linkedPrecedence     LinkedPrecedence
+  // createdAt            DateTime
+  createdAt            DateTime                       @default(now())      // Automatically sets creation timestamp
+  // updatedAt            DateTime
+  updatedAt            DateTime                       @updatedAt           // Automatically updates on modification
+  // deletedAt            DateTime
+  // deletedAt            DateTime?                      @deletedAt         // If this is for soft delete, it's fine
+  deletedAt            DateTime?                               // If this is for soft delete, it's fine
+}
+
+enum LinkedPrecedence{
+  primary
+  secondary
+}
