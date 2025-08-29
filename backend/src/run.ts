@@ -21,7 +21,7 @@ app.use('/api', identification_process_routes)
 const PORT = process.env.PORT || 3001;
 
 
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
   res.json("this is the backend home route by identity-reconciliation, hey there!")
 });
 

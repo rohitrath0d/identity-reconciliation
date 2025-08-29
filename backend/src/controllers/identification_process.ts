@@ -8,16 +8,18 @@ import { Prisma } from "@prisma/client";
 //   phoneNumber?: string
 // }
 
-export const identificationProcess = async (req: Request, res: Response) => {
+export const identificationProcess = async (req: Request, res: Response): Promise<void> => {
 
   try {
     const { email, phoneNumber } = req.body;
 
     if (!email && !phoneNumber) {
-      return res.status(400).json({
+      // return res.status(400).json({
+      res.status(400).json({
         success: false,
         error: "Either email or phoneNumber is required"
       })
+      return;
     }
 
     // finding if there's an existing contact
@@ -83,7 +85,8 @@ export const identificationProcess = async (req: Request, res: Response) => {
         },
       });
 
-      return res.json({
+      // return res.json({
+      res.json({
         success: true,
         contact: {
           // "primaryContactId": number,
