@@ -12,10 +12,11 @@
     // "types": [],
     // For nodejs:
     "lib": ["esnext"],
-    "types": ["node"],
+    "types": ["node", "jest"], // Include type definitions for Node.js
     // and npm install -D @types/node
     "moduleResolution": "nodenext", // Resolve modules like Node.js does
     "esModuleInterop": true,  // Allow importing CommonJS modules (like Express) with `import`
+    
 
     // Other Outputs
     "sourceMap": true,
@@ -47,6 +48,6 @@
     "emitDeclarationOnly": true,
     "allowImportingTsExtensions":  true,
   },
-  "include": ["src/**/*"],      // Include all `.ts` files in the `src` folder
+  "include": ["src/**/*", "tests"],      // Include all `.ts` files in the `src` folder
   "exclude": ["node_modules"]   // Exclude the `node_modules` folder
 }
