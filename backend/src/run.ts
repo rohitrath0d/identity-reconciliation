@@ -15,6 +15,7 @@ DBConnection()
 
 
 // routes
+// app.use('/api', identification_process_routes)
 app.use('/api', identification_process_routes)
 
 const PORT = process.env.PORT || 3001;
