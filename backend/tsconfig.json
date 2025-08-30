@@ -22,8 +22,8 @@
 
     // Other Outputs
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // "declaration": false,
+    // "declarationMap": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -47,7 +47,8 @@
     "skipLibCheck": true,     // Skip checking of type declaration files for faster compilation
     "resolveJsonModule": true, // Allow importing JSON files as modules
 
-    "emitDeclarationOnly": true,
+    "noEmit": true,           // Don't emit output files (useful when using tsc for type-checking only) 
+    // "emitDeclarationOnly": true,
     "allowImportingTsExtensions":  true,
   },
   "include": ["src/**/*", "tests"],      // Include all `.ts` files in the `src` folder
