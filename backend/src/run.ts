@@ -2,8 +2,10 @@
 import express from "express";
 import type { Request, Response } from "express";
 import dotenv from "dotenv"
-import {DBConnection} from "./db/init_db.ts"
-import identification_process_routes from "./routes/identification_process_routes.ts"
+// import {DBConnection} from "./db/init_db.ts"
+import {DBConnection} from "./db/init_db.js"
+// import identification_process_routes from "./routes/identification_process_routes.ts"
+import identification_process_routes from "./routes/identification_process_routes.js"
 
 
 dotenv.config()

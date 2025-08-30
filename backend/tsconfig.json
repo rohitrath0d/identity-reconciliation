@@ -8,22 +8,24 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     // "module": "nodenext",
-    "module": "nodenext",
+    "module": "NodeNext",
     // "target": "esnext",
-    "target": "es2020",
+    "target": "ES2020",
     // "types": [],
     // For nodejs:
     "lib": ["esnext"],
     "types": ["node", "jest"], // Include type definitions for Node.js
     // and npm install -D @types/node
-    // "moduleResolution": "nodenext", // Resolve modules like Node.js does
+    "moduleResolution": "NodeNext", // Resolve modules like Node.js does
     "esModuleInterop": true,  // Allow importing CommonJS modules (like Express) with `import`
     
 
     // Other Outputs
     "sourceMap": true,
     // "declaration": false,
-    // "declarationMap": true,
+    "declaration": true,
+    // "declarationMap": false,
+    "declarationMap": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -47,9 +49,14 @@
     "skipLibCheck": true,     // Skip checking of type declaration files for faster compilation
     "resolveJsonModule": true, // Allow importing JSON files as modules
 
-    "noEmit": true,           // Don't emit output files (useful when using tsc for type-checking only) 
-    // "emitDeclarationOnly": true,
-    "allowImportingTsExtensions":  true,
+    "noEmit": false,           // Don't emit output files (useful when using tsc for type-checking only) 
+    "emitDeclarationOnly": false,
+    // "allowImportingTsExtensions":  true,
+    "allowImportingTsExtensions":  false,
+
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true
+
   },
   "include": ["src/**/*", "tests"],      // Include all `.ts` files in the `src` folder
   "exclude": ["node_modules"]   // Exclude the `node_modules` folder

@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
-import { prisma } from "../db/init_db.ts";
+// import { prisma } from "../db/init_db.ts";
+import { prisma } from "../db/init_db.js";
 import { Prisma } from "@prisma/client";
 
 
