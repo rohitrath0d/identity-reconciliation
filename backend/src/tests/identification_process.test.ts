@@ -1,5 +1,5 @@
 import request from "supertest";
-import  app  from "../run.ts"; // Ensure app is exported from run.ts
+import  {app}  from "../run.ts"; // Ensure app is exported from run.ts
 import { prisma } from "../db/init_db.ts";
 
 jest.mock("../db/init_db", () => ({
