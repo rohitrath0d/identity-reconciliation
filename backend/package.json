@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node dist/run.js",
-    "build": "ts-node",
+    "build": "tsc",
     "test": "jest",
     "dev": "nodemon --exec ts-node src/run.ts"
   },
