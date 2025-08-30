@@ -30,3 +30,4 @@ app.listen(PORT, () => {
 });
 
 export {app};       // Exporting the app for testing purposes - so that jest can access it, make the right configs and api's calls, and run the tests
+export default app;       // Exporting the app for testing purposes - so that jest can access it, make the right configs and api's calls, and run the tests
