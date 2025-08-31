@@ -7,7 +7,6 @@ import {DBConnection} from "./db/init_db.js"
 // import identification_process_routes from "./routes/identification_process_routes.ts"
 import identification_process_routes from "./routes/identification_process_routes.js"
 
-
 dotenv.config()
 
 const app = express();

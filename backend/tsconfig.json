@@ -55,7 +55,9 @@
     "allowImportingTsExtensions":  false,
 
     "allowJs": false,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+
+    "downlevelIteration": true
 
   },
   "include": ["src/**/*", "tests"],      // Include all `.ts` files in the `src` folder

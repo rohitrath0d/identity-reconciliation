@@ -5,10 +5,10 @@
   "main": "run.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -w",
     "start": "node dist/src/run.js",
     "test": "jest",
-    "dev": "nodemon --exec ts-node src/run.ts"
+    "dev": "npx tsc -build && nodemon --exec ts-node dist/src/run.js"
   },
   "keywords": [],
   "author": "",
